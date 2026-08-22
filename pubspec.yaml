@@ -1,0 +1,58 @@
+name: needblood
+description: A city-to-city blood donor network for Pakistan — online and offline alerts.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # Backend / auth / realtime data / push notifications
+  firebase_core: ^2.27.0
+  firebase_auth: ^4.17.4
+  cloud_firestore: ^4.15.4
+  firebase_messaging: ^14.7.15
+  firebase_storage: ^11.6.5
+
+  # Location
+  geolocator: ^11.0.0
+  geocoding: ^3.0.0
+
+  # Offline SMS fallback (send/receive when no internet)
+  telephony: ^0.2.0
+  connectivity_plus: ^6.0.1
+
+  # Local queue for offline-first (retry alerts once back online)
+  sqflite: ^2.3.2
+  path_provider: ^2.1.2
+
+  # Alarm-style ringtone + vibration for incoming alerts
+  audioplayers: ^6.0.0
+  vibration: ^1.8.4
+  flutter_local_notifications: ^17.0.0
+
+  # Audio calling (in-app voice call between donor & recipient)
+  agora_rtc_engine: ^6.3.2
+
+  # State management
+  provider: ^6.1.2
+  uuid: ^4.3.3
+
+  # UI helpers
+  google_fonts: ^6.2.1
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  # assets:
+  #   - assets/sounds/alert_ring.mp3
+  #   - assets/images/
